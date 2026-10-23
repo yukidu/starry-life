@@ -33,8 +33,8 @@ node scripts/generate-worker.mjs
 
 ## 正式版與版本還原
 
-詳見 `RELEASE.md`。Cloudflare Worker 為 `life-starry`；PWA 支援手機瀏覽器。GitHub Workflow 已附原始碼包，但由於無法透過現有 GitHub 連線新建獨立 repo，所以本次 Cloudflare 仍是 API 直接正式發布，**不是 GitHub Actions 自動部署**。
+詳見 `RELEASE.md`。Cloudflare Worker 為 `life-starry`；PWA 支援手機瀏覽器。Cloudflare v1.4 是先前 API 直接正式發布的版本，**不是 GitHub Actions 自動部署**；目前已把相同原始碼納入 GitHub 管理。
 
 ## GitHub CI／正式部署交接
 
-已新增可重現正式 Worker 的 GitHub Actions 設定，詳見 [`GITHUB_SETUP.md`](GITHUB_SETUP.md)。目前 GitHub repo 尚未建立，正式網站維持 v1.4，安全啟用開關預設關閉。
+已新增可重現正式 Worker 的 GitHub Actions 設定，詳見 [`GITHUB_SETUP.md`](GITHUB_SETUP.md)。GitHub 獨立專案 `yukidu/starry-life` 的 `main` 已上傳 v1.4 原始碼；正式網站維持 v1.4，安全啟用開關預設關閉。雲端 CI 與 Cloudflare 自動發布仍待驗證／設定。

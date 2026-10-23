@@ -27,7 +27,7 @@ Cloudflare 將指定 Worker Version 的流量切回 100% 即可復原該版本�
 
 ## 後續尚待
 
-GitHub 獨立 `yukidu/starry-life` repo 與 Actions 自動部署仍未完成；Cloudflare API 部署成功，非 GitHub CI/CD 部署。已保存獨立原始碼、全部測試與 CI Workflow，避免動到其他 Starry App。
+GitHub 獨立 `yukidu/starry-life` repo 和 `main` 原始碼已完成匯入；GitHub Actions CI 尚待雲端驗證、Cloudflare 自動部署仍預設關閉。Cloudflare v1.4 為先前 API 直接部署成功的正式版，非 GitHub CI/CD 部署。已保存獨立原始碼、全部測試與 CI Workflow，避免動到其他 Starry App。
 
 ---
 

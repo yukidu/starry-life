@@ -12,4 +12,4 @@
 - 正式上線：Cloudflare Production Worker 100%，正式網域與新版首頁已透過 Cloudflare Browser Rendering HTTP 200 驗證。
 - 深色一致性測試：375、390、768、1280 四種尺寸，跨單人、雙人、知識庫與報告分頁，首頁、卡片、輸入框、九宮格、線條選項、九色圖例及其他主要區塊保持深色背景。
 - v1.4 Cloudflare 正式版：`29762d4f-a217-449d-964c-016bdf5a6109`、100% 流量，正式網址與 CSS/JS/SW/Manifest 均驗證 HTTP 200。
-- GitHub 新 repo／main／CI 尚未完成，待另行處理。
+- GitHub `yukidu/starry-life` 專案及 `main` 原始碼已完成匯入；遠端 GitHub Actions CI 尚未確認，正式自動部署開關預設關閉。
