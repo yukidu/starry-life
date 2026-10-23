@@ -1,0 +1,7 @@
+dist/
+node_modules/
+*.png
+.DS_Store
+.wrangler/
+.deploy/
+繁星生命靈數_離線預覽.html

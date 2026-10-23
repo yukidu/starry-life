@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+const read=p=>fs.readFileSync(p,'utf8');
+const source=read('index.html');
+const math=read('src/numerology.mjs').replaceAll('export const ','const ').replaceAll('export function ','function ');
+const copy=read('src/content.mjs').replaceAll('export const ','const ');
+let app=read('src/app.mjs').replace(/^import\s+.*?from\s+['"].*?['"];?\s*$/gm,'');
+app=app.replace("if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{}));}",'');
+const inline=source.replace('<link rel="icon" href="/icon.svg" type="image/svg+xml" />','').replace('<link rel="manifest" href="/manifest.webmanifest" />','').replace('<link rel="stylesheet" href="/src/styles.css" />',`<style>${read('src/styles.css')}</style>`).replace('<script type="module" src="/src/app.mjs"></script>',`<script type="module">\n${math}\n${copy}\n${app}\n</script>`);
+fs.writeFileSync('繁星生命靈數_離線預覽.html',inline);
+console.log('Standalone offline preview generated');

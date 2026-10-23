@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#080f22" />
+  <meta name="description" content="繁星生命靈數｜星際指揮艙：原始計算器五類數字、九宮同心星環與雙人星圖。" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta property="og:title" content="繁星生命靈數｜星際指揮艙" />
+  <meta property="og:description" content="啟動你的生命座標，讓星圖展開。" />
+  <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="stylesheet" href="/src/styles.css" />
+  <title>繁星生命靈數｜星際指揮艙</title>
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <div class="sky-texture" aria-hidden="true"></div>
+  <div class="workspace">
+    <aside class="side-rail" aria-label="操作導覽">
+      <a class="brand" href="#atlas" data-view-link="atlas" aria-label="繁星生命靈數指揮艙首頁"><span class="brand-emblem" aria-hidden="true">✳</span><span class="brand-wordmark">STARRY<span class="brand-minor"> / LIFE</span><small>星際午夜 · ASTRA STATION</small></span></a>
+      <div class="rail-rule"><span>MISSION CONTROL</span><i></i></div>
+      <nav class="nav" aria-label="主功能">
+        <button type="button" class="nav-tab active" data-view="atlas" aria-current="page"><span class="nav-icon" aria-hidden="true">◎</span><span>單人星圖<small>MY COSMIC MAP</small></span><span class="nav-arrow" aria-hidden="true">↗</span></button>
+        <button type="button" class="nav-tab" data-view="bond"><span class="nav-icon" aria-hidden="true">⋈</span><span>雙人共鳴<small>TWO SOULS</small></span><span class="nav-arrow" aria-hidden="true">↗</span></button>
+        <button type="button" class="nav-tab" data-view="codex"><span class="nav-icon" aria-hidden="true">⌑</span><span>星圖知識庫<small>THE ARCHIVE</small></span><span class="nav-arrow" aria-hidden="true">↗</span></button>
+      </nav>
+      <div class="rail-bottom"><div class="rail-status"><span class="status-light"></span><span>本機運算 · 無須登入</span></div>
+        <button id="sound-toggle" class="sound-toggle" type="button" aria-pressed="false" aria-label="切換互動音效"><span class="sound-icon">♫</span><span>互動音效 <strong class="sound-toggle-label">關閉</strong></span><span class="toggle-track" aria-hidden="true"><i></i></span></button>
+        <small class="rail-version">STARRY.PHD © 2026 · V1.4</small>
+      </div>
+    </aside>
+
+    <main id="main" class="main-workspace">
+      <header class="mobile-header"><span class="brand-emblem">✳</span><div><strong>STARRY / LIFE</strong><small>ASTRA STATION</small></div><button id="sound-toggle-mobile" class="mobile-sound-toggle" type="button" aria-pressed="false" aria-label="切換互動音效"><span aria-hidden="true">♫</span><span class="sound-toggle-label">關閉</span></button></header>
+      <div class="workspace-topline"><span><i class="signal-dot"></i> 系統運作正常</span><span>STARRY LIFE <b> / </b> EXPLORATION TERMINAL</span><span class="topline-sequence">SL—03 / 2026</span></div>
+
+      <section id="explore" data-screen="atlas" class="screen atlas-screen" aria-labelledby="hero-title">
+        <div class="atlas-intro"><div><span class="overline"><span class="overline-line"></span> 01 / YOUR ORIGIN</span><h1 id="hero-title">宇宙座標，<br><em>從你誕生那天開始。</em></h1><p>不是占卜未來，而是重新閱讀自己。輸入生日，開啟你專屬的九宮星環、生命數字與星際連線。</p></div><div class="intro-stamp" aria-hidden="true"><span>ORBIT<br>IDENTITY</span><strong>✧</strong><span>EST. 2026<br>STARRY.PHD</span></div></div>
+        <div class="launch-layout">
+          <section class="launch-module" aria-labelledby="calculator-title"><div class="module-step"><span>01 / ORIGIN INPUT</span><span class="module-marker">● READY</span></div><div class="module-content"><div class="launch-kicker">設立你的宇宙身份</div><h2 id="calculator-title">輸入出生座標</h2><p>日期將在你的裝置直接計算，不傳送到伺服器。</p>
+            <form id="calc-form" class="date-form"><label for="birthdate">出生日期 · 西元年月日</label><div class="date-input-wrap"><span class="date-icon" aria-hidden="true">▦</span><input id="birthdate" name="birthdate" type="date" min="0001-01-01" max="9999-12-31" autocomplete="bday" required /></div><button class="primary-btn" type="submit"><span>啟動星圖分析</span><span aria-hidden="true">↗</span></button><button id="demo" type="button" class="link-btn">使用範例生日 1993 / 12 / 25 <span aria-hidden="true">→</span></button><p id="form-error" class="form-error" role="alert" hidden></p></form>
+            <div class="launch-footnote"><span>✧ 免費探索</span><span>✧ 九色數字環</span><span>✧ 12 組連線</span></div>
+          </div></section>
+          <div class="signal-module" aria-hidden="true"><div class="signal-caption"><span>VISUAL FREQUENCY</span><span>LIVE / ORBITAL FIELD</span></div><div class="signal-graphic"><div class="signal-circle circle-a"></div><div class="signal-circle circle-b"></div><div class="signal-circle circle-c"></div><div class="signal-core"><span>✺</span></div><span class="signal-satellite satellite-a">✦</span><span class="signal-satellite satellite-b">✧</span><div class="axis axis-x"></div><div class="axis axis-y"></div></div><div class="signal-readout"><div><small>SECTOR</small><strong>STARRY · 09</strong></div><div><small>STATUS</small><strong>AWAITING INPUT</strong></div></div></div>
+        </div>
+        <div id="result" class="results" hidden aria-live="polite"></div>
+        <div class="welcome-foot"><span>TRANSMISSION 001</span><span>每一顆星，都有自己的運行節奏。</span><span>SCROLL TO EXPLORE ↘</span></div>
+      </section>
+
+      <section id="pair" data-screen="bond" class="screen bond-screen" aria-labelledby="pair-title" hidden>
+        <div class="section-heading"><span class="overline"><span class="overline-line"></span> 02 / CONNECTION LAB</span><h1 id="pair-title">兩個宇宙，<br><em>在此交會。</em></h1><p>不給愛情打分數。透過共同數字與互補星環，開啟更深的對話。</p></div>
+        <div class="pair-panel"><div class="pair-heading"><span>DUAL-SIGNAL SYNC</span><span>● SIGNAL LINK OPEN</span></div><form id="pair-form"><div class="pair-inputs"><div class="pair-person"><div class="person-badge">A</div><label for="pair-a">第一位的出生日期</label><input type="date" id="pair-a" min="0001-01-01" max="9999-12-31" required /></div><div class="pair-divider" aria-hidden="true">↔</div><div class="pair-person"><div class="person-badge second">B</div><label for="pair-b">第二位的出生日期</label><input type="date" id="pair-b" min="0001-01-01" max="9999-12-31" required /></div></div><button type="submit" class="primary-btn pair-submit"><span>開始共鳴比對</span><span aria-hidden="true">↗</span></button><p id="pair-error" class="form-error" role="alert" hidden></p></form><div id="pair-result" hidden aria-live="polite"></div></div>
+        <p class="quiet-note">✳ 這是一種自我探索的傳統數字學呈現，無法預測關係成功與否。</p>
+      </section>
+
+      <section id="guide" data-screen="codex" class="screen codex-screen" aria-labelledby="guide-title" hidden>
+        <div class="section-heading"><span class="overline"><span class="overline-line"></span> 03 / ARCHIVE OPEN</span><h1 id="guide-title">讀懂星圖的<br><em>運行法則。</em></h1><p>規則公開可驗證，資料留在你的裝置。了解每顆數字是怎麼被算出來的。</p></div>
+        <div class="guide-grid"><article class="glass-tile"><div class="tile-symbol">01</div><h3>命數</h3><p>將生日每個數字加總，依原站計算器化約到 1～9；途中如出現 11／22／33，額外標註為特殊數。</p></article><article class="glass-tile"><div class="tile-symbol">02</div><h3>生日數與天賦數</h3><p>生日數是出生日的化約結果；天賦數是生日數字首次加總的十位及個位，在星圖各計兩次。</p></article><article class="glass-tile"><div class="tile-symbol">03</div><h3>九宮星環</h3><p>排列：1／4／7、2／5／8、3／6／9。先天數、命數、生日數、星座數、天賦數合計，每次出現新增一圈。</p></article><article class="glass-tile"><div class="tile-symbol">04</div><h3>文化與界線</h3><p>數字與星座是傳統民俗詮釋，不是科學人格測驗，也不能代替健康、感情或職涯的專業判斷。</p></article></div>
+        <details class="sources"><summary>檢視原始規則、算法差異與資料保護 <span aria-hidden="true">＋</span></summary><div class="sources-body"><p>計算與九宮格依新浪 2012 年生命靈數互動計算器核對，五類數字的加權方式與原站一致。特殊數在原文章與計算器的處理有差異：本站以計算器最終命數 1～9 為主，另外記錄 11／22／33。解讀文案是繁星原創。</p><p>本網站使用新浪舊計算器的星座日期分界。生日在本機計算，無登入與資料庫，除非使用者主動選擇儲存，否則不保存生日。</p><p>參考：<a href="https://astro.sina.com.cn/z/numberology/" target="_blank" rel="noopener noreferrer">新浪生命靈數專題 ↗</a>　<a href="https://astro.sina.com.cn/numberolgy.html" target="_blank" rel="noopener noreferrer">原始計算器 ↗</a>　<a href="https://astro.sina.com.cn/l/2012-03-30/141878145.shtml" target="_blank" rel="noopener noreferrer">算法文章 ↗</a></p></div></details>
+      </section>
+      <footer class="footer"><span>✳ STARRY LIFE · ASTRA COMMAND</span><span>你的頻率，自成宇宙。</span><small>民俗娛樂與自我探索用途 · 不是科學測評</small></footer>
+    </main>
+    <nav class="mobile-dock" aria-label="手機功能導覽"><button class="dock-tab active" type="button" data-view="atlas" aria-current="page"><span>◎</span><small>個人星圖</small></button><button class="dock-tab" type="button" data-view="bond"><span>⋈</span><small>雙人共鳴</small></button><button class="dock-tab" type="button" data-view="codex"><span>⌑</span><small>知識庫</small></button></nav>
+  </div>
+  <script type="module" src="/src/app.mjs"></script>
+</body>
+</html>
